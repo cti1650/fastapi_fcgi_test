@@ -1,7 +1,8 @@
-from flask import Flask
+from fastapi import FastAPI
+from fastapi.responses import PlainTextResponse
 
-app = Flask(__name__)
+app = FastAPI()
 
-@app.route('/')
-def hello_world():
-    return 'Hello, World!'
+@app.get("/", response_class=PlainTextResponse)
+async def read_root():
+    return "Hello, World!"
