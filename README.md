@@ -13,7 +13,7 @@ cd fastapi_fcgi_test
 
 #### 本番環境
 ```
-python3.9 -m pip install a2wsgi fastapi[all] flup
+python3.9 -m pip install -r requirements_prod.txt
 ```
 
 #### 開発環境
@@ -29,7 +29,7 @@ chmod 755 index.fcgi
 chmod 600 hello.py
 ```
 
-### 更新
+### 本番環境 更新
 ```
 git reset --hard
 git pull
@@ -39,6 +39,11 @@ or
 
 ```
 sh script/setup.sh
+```
+
+### 開発環境 サーバー起動
+```
+uvicorn app.main:app --reload
 ```
 
 ## 参考サイト
