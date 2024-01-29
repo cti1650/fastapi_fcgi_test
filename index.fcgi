@@ -2,7 +2,7 @@
 import a2wsgi
 from flup.server.fcgi import WSGIServer
 import os
-from hello import app
+from app.main import app
 
 if __name__ == '__main__':
     os.environ.setdefault("PATH_INFO", "")
