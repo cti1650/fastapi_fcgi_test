@@ -11,8 +11,14 @@ cd fastapi_fcgi_test
 
 ### ライブラリインストール
 
+#### 本番環境
 ```
 python3.9 -m pip install a2wsgi fastapi[all] flup
+```
+
+#### 開発環境
+```
+pip install -r requirements.txt
 ```
 
 ### 権限付与
